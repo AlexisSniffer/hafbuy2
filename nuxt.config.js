@@ -1,4 +1,6 @@
 export default {
+  ssr: false,
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'hafbuy2',
@@ -13,6 +15,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    //~/static/css/bootstrap.min.css',
     'ant-design-vue/dist/antd.css',
     { src: '~/assets/sass/main.scss', lang: 'scss' },
   ],

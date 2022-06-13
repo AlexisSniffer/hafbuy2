@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <button class="btn btn-primary">Hola</button>
-  </div>
+  <main class="main home skeleton-body">
+    <div class="bg-gray pb-5">
+      <div class="container pb-3">Home page</div>
+    </div>
+  </main>
 </template>
 
 <script>
