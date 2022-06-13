@@ -1,5 +1,7 @@
 <template>
-  <Tutorial />
+  <div>
+    <button class="btn btn-primary">Hola</button>
+  </div>
 </template>
 
 <script>
