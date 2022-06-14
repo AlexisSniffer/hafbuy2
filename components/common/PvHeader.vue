@@ -7,7 +7,6 @@
             class="info-box info-box-icon-left text-primary justify-content-start p-0"
           >
             <i class="icon-shipping"></i>
-
             <div class="info-box-content">
               <h4 class="text-transform-none">
                 FREE Express Shipping On Orders $99+
@@ -17,35 +16,12 @@
         </div>
 
         <div class="header-right header-dropdowns ml-0 ml-sm-auto w-sm-100">
-          <div class="header-dropdown">
-            <a href="javascript:;">USD</a>
-            <div class="header-menu">
-              <ul>
-                <li>
-                  <a href="javascript:;">EUR</a>
-                </li>
-                <li>
-                  <a href="javascript:;">USD</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
           <div class="header-dropdown mr-auto mr-sm-3 mr-md-0">
-            <a href="javascript:;"> <i class="flag-us flag"></i>Eng</a>
+            <span><i class="flag-pa flag"></i>Spa</span>
 
             <div class="header-menu">
               <ul>
-                <li>
-                  <a href="javascript:;">
-                    <i class="flag-us flag mr-2"></i>ENG</a
-                  >
-                </li>
-                <li>
-                  <a href="javascript:;">
-                    <i class="flag-fr flag mr-2"></i>FRA</a
-                  >
-                </li>
+                <li><i class="flag-pa flag mr-2"></i>Spa</li>
               </ul>
             </div>
           </div>
@@ -54,15 +30,11 @@
             <a href="javascript:;">Links</a>
             <div class="header-menu">
               <ul>
-                <li>
-                  <nuxt-link to="/pages/account">My Account</nuxt-link>
-                </li>
-                <li>
-                  <nuxt-link to="/pages/cart">Cart</nuxt-link>
-                </li>
+                <li><nuxt-link to="/pages/account">Mi Cuenta</nuxt-link></li>
+                <li><nuxt-link to="/pages/cart">Carrito</nuxt-link></li>
                 <li>
                   <nuxt-link to="/pages/login" class="login-link"
-                    >Log In</nuxt-link
+                    >Iniciar Sesión</nuxt-link
                   >
                 </li>
               </ul>
@@ -71,15 +43,18 @@
 
           <div class="social-icons">
             <a
-              href="javascript:;"
+              href="http://facebook.com"
+              target="_blank"
               class="social-icon social-facebook icon-facebook"
             ></a>
             <a
-              href="javascript:;"
+              href="http://twitter.com"
+              target="_blank"
               class="social-icon social-twitter icon-twitter"
             ></a>
             <a
-              href="javascript:;"
+              href="http://instagram.com"
+              target="_blank"
               class="social-icon social-instagram icon-instagram"
             ></a>
           </div>
@@ -97,6 +72,7 @@
           >
             <i class="fas fa-bars"></i>
           </button>
+
           <nuxt-link to="/" class="logo">
             <img
               src="~/static/images/logo-black.png"
@@ -109,19 +85,14 @@
         </div>
 
         <div class="header-right w-lg-max">
-          <!-- <pv-header-search></pv-header-search> -->
+          <pv-header-search></pv-header-search>
 
-          <a
-            href="javascript:;"
-            @click="openLoginModal"
-            class="d-lg-block d-none"
-            title="login"
-          >
+          <a class="d-lg-block d-none" title="login" @click="openLoginModal">
             <div class="header-user">
               <i class="icon-user-2"></i>
               <div class="header-userinfo">
-                <span>Welcome</span>
-                <h4 class="mb-0">My Account</h4>
+                <span>Bienvenido</span>
+                <h4 class="mb-0">Mi Cuenta</h4>
               </div>
             </div>
           </a>
@@ -153,16 +124,14 @@
 <script>
 // import PvMainMenu from '~/components/common/partials/PvMainMenu'
 // import PvCartMenu from '~/components/common/partials/PvCartMenu'
-// import PvHeaderSearch from '~/components/common/partials/PvHeaderSearch'
+import PvHeaderSearch from '~/components/common/partials/PvHeaderSearch'
 // import { mapGetters } from 'vuex'
-
-document.querySelector('body').classList.add('loaded')
 
 export default {
   components: {
     // PvMainMenu,
     // PvCartMenu,
-    // PvHeaderSearch,
+    PvHeaderSearch,
   },
   data: function () {
     return {
@@ -172,45 +141,15 @@ export default {
       },
     }
   },
-  computed: {
-    // ...mapGetters('wishlist', ['wishList']),
-  },
-  mounted: function () {
-    /* let items = document.querySelectorAll('.menu-vertical > li')
-    items.forEach((item) => {
-      item.addEventListener('mouseenter', this.mouseOverHandler)
-      item.addEventListener('mouseleave', this.mouseLeaveHandler)
-    }) */
-  },
-  destroyed: function () {
-    /* let items = document.querySelectorAll('.menu-vertical > li')
-    items.forEach((item) => {
-      item.removeEventListener('mouseover', this.mouseOverHandler)
-      item.removeEventListener('mouseleave', this.mouseLeaveHandler)
-    }) */
-  },
+  computed: {},
+  mounted: function () {},
+  destroyed: function () {},
   methods: {
-    openLoginModal: function () {
-      /* this.$modal.show(
-				() => import('~/components/features/modal/PvLoginModal'),
-				{},
-				{ width: '525', height: 'auto', adaptive: true }
-			); */
-    },
-    showMobileMenu: function () {
-      document.querySelector('body').classList.add('mmenu-active')
-    },
-    showMobileSearch: function (e) {
-      /* let headerSearch = e.currentTarget.closest('.header-search')
-      headerSearch.classList.add('show')
-      headerSearch.querySelector('.header-search-wrapper').classList.add('show') */
-    },
-    mouseOverHandler: function (e) {
-      e.currentTarget.classList.add('show')
-    },
-    mouseLeaveHandler: function (e) {
-      e.currentTarget.classList.remove('show')
-    },
+    openLoginModal: function () {},
+    showMobileMenu: function () {},
+    showMobileSearch: function (e) {},
+    mouseOverHandler: function (e) {},
+    mouseLeaveHandler: function (e) {},
   },
 }
 </script>
