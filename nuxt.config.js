@@ -59,6 +59,10 @@ export default {
     },
   },
 
+  router: {
+    base: '/hafbuy2/',
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     publicPath: 'https://hafbuy-app-ps9eq.ondigitalocean.app/',
